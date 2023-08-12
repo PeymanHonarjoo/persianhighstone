@@ -62,7 +62,7 @@
                   <v-fade-transition>
                     <router-link
                       :to="{
-                        name: 'Contact',
+                        name: 'ContactItem',
                         params: { id: pageItems.title },
                       }"
                       class="text-decoration-none text-grey-lighten-3"
