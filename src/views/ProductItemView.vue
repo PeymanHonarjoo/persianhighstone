@@ -42,7 +42,7 @@
             sm="4"
             md="3"
             v-for="pageItems in productInfo.pageItems"
-            :key="pageItems.title"
+            :key="pageItems.id"
           >
             <v-hover v-slot="{ isHovering, props }" open-delay="150">
               <v-card
@@ -61,7 +61,10 @@
                 >
                   <v-fade-transition>
                     <router-link
-                      to="/"
+                      :to="{
+                        name: 'Contact',
+                        params: { id: pageItems.title },
+                      }"
                       class="text-decoration-none text-grey-lighten-3"
                     >
                       <div
